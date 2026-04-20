@@ -22,3 +22,20 @@ management:
   zipkin:
     tracing:
       endpoint: http://tracing-server:9411/api/v2/spans
+chaos:
+  monkey:
+    enabled: true 
+    watcher:
+      controller: true
+      restController: true
+      service: true
+      repository: true
+      component: true
+    assaults:
+      level: 5
+      exceptionsActive: true
+      memoryActive: true
+      latencyActive: true
+      latencyRangeStart: 1000
+      latencyRangeEnd: 10000
+      killApplicationActive: true
