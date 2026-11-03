@@ -23,6 +23,8 @@ spring:
     activate:
       on-profile: docker
 eureka:
+  instance:
+    prefer-ip-address: false
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
